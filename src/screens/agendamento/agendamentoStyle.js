@@ -6,8 +6,8 @@ export const AgendamentoStyle = StyleSheet.create({
             width: 160,
             height: 40,
             marginLeft: 130,
-            marginTop: 50,
-            marginBottom: 70,
+            marginTop: 65,
+            marginBottom: 90,
             borderRadius: 20,
             backgroundColor: '#0C008C',
 

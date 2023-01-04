@@ -24,7 +24,6 @@ export function Agendamento({ navigation }) {
                     }}
                     current="2023-01-03"               
                     mode="datepicker"
-                    minuteInterval={5}
                     onSelectedChange={date => setSelectedDate(date)}
                     
                 />

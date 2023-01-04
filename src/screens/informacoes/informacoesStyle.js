@@ -9,7 +9,7 @@ export const InformacoesStyle = StyleSheet.create({
     box: {
         width: 315,
         height: 350,
-        marginTop: 50,
+        marginTop: 65,
         marginLeft: 50,
         justifyContent: 'center',
         alignItems: 'center',
@@ -25,7 +25,7 @@ export const InformacoesStyle = StyleSheet.create({
         height: 40,
         marginLeft: 130,
         marginTop: 70,
-        marginBottom: 70,
+        marginBottom: 100,
         borderRadius: 20,
         backgroundColor: '#0C008C',
     },

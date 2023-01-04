@@ -38,7 +38,7 @@ export const CarrinhoStyle = StyleSheet.create({
             height: 40,
             marginLeft: 130,
             marginTop: 110,
-            marginBottom: 110,
+            marginBottom: 115,
             borderRadius: 20,
             backgroundColor: '#0C008C',
 

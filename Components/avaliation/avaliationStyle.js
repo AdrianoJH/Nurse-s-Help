@@ -6,12 +6,7 @@ export const AvaliationStyle = StyleSheet.create({
         padding: 10,
 
       },
-      textStyle: {
-        textAlign: 'center',
-        fontSize: 23,
-        color: '#000',
-        marginTop: 15,
-      },
+
       buttonStyle: {
         justifyContent: 'center',
         flexDirection: 'row',
@@ -25,8 +20,8 @@ export const AvaliationStyle = StyleSheet.create({
       },
       ratingBarStyle: {
         flexDirection: 'row',
-        left: 40,
-        top: -30,
+        left: 45,
+  
 
       },
       starImageStyle: {

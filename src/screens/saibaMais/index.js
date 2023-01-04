@@ -19,7 +19,7 @@ export function SaibaMais({ navigation }) {
             <View style={SaibaMaisStyle.header2}>
                 <Image style={SaibaMaisStyle.imgHeader} source={require('../../img/profile.png')} />
                 <Text style={SaibaMaisStyle.txtHeader}>Adriano Rodrigues  </Text>
-                <Text style={SaibaMaisStyle.txtHeader2}>Enfermeiro  COREN 12345  </Text>
+                <Text style={SaibaMaisStyle.txtHeader2}>Enfermeiro      COREN: 12345  </Text>
 
             </View>
             

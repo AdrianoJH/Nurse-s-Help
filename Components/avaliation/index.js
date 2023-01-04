@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { SafeAreaView, View, Text, Image, TouchableOpacity } from 'react-native';
 import { AvaliationStyle } from './avaliationStyle';
 
-export function Avaliation  ()  {
+export default function Avaliation  ()  {
   const [defaultRating, setDefaultRating] = useState(0);
   const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5]);
 
@@ -33,10 +33,7 @@ export function Avaliation  ()  {
   return (
     <SafeAreaView style={AvaliationStyle.container}>
       <View style={AvaliationStyle.container}>
-        <RatingBar />
-        <Text style={AvaliationStyle.textStyle}>
-          {defaultRating} / {Math.max.apply(null, maxRating)}
-        </Text>
+        <RatingBar />      
       </View>
     </SafeAreaView>
   );

@@ -1,16 +1,47 @@
 import { StyleSheet } from 'react-native';
 
 export const PrestadoresStyle = StyleSheet.create({
-    container: {
-
-
+    
+    boxFilter: {
+        display: 'flex',
+        flexDirection: 'row',
+        marginTop: 15,
+        marginBottom: 20,
+       
     },
+
+    imgFilter: {
+        marginLeft: 20,
+        width: 20,
+        height: 20,
+    },
+
+    txtFilter: {
+        marginLeft: 10,
+        marginTop: -4,
+        fontSize: 15,
+        color: '#0C008C'
+    },
+
+    txtOrder: {
+        marginTop: -3,
+        marginLeft: 210,
+        fontSize: 15,
+        color: '#0C008C'
+    },
+
+    imgOrder: {
+        marginLeft: 5,
+        width: 20,
+        height: 15,
+    },
+
 
 
     box: {
         width: 310,
         height: 115,
-        marginTop: -115,
+        marginTop: -120,
         marginLeft: 78,
         backgroundColor: '#B0C4DE',
     },
@@ -74,6 +105,7 @@ export const PrestadoresStyle = StyleSheet.create({
         display: 'flex',
         width: 75,
         height: 30,
+        marginBottom: 17,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 17,
@@ -88,7 +120,7 @@ export const PrestadoresStyle = StyleSheet.create({
 
     saibaMais: {
         top: 10,
-        right: 10,
+        marginLeft: -5,
         fontSize: 14,
         fontWeight: 'bold',
         color: '#0C008C'
@@ -96,8 +128,8 @@ export const PrestadoresStyle = StyleSheet.create({
     },
 
     icon: {
-        left: 67,
-        bottom: 10,
+        marginLeft: 67,
+        marginTop: -20,
         fontSize: 20,
         fontWeight: 'bold',
         color: '#0C008C'

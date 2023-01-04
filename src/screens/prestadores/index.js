@@ -7,7 +7,7 @@ import { CardPrestadores } from '../../../Components/cardPrestadores/index';
 import { dataPrestador } from '../../../data/prestador';
 import { dataPrestador2 } from '../../../data/prestador';
 import { dataPrestador3 } from '../../../data/prestador';
-import { Avaliation } from '../../../Components/avaliation/index';
+import  Avaliation  from '../../../Components/avaliation/index';
 import Icon from 'react-native-vector-icons/Feather';
 
 
@@ -16,6 +16,17 @@ export function Prestadores({ navigation }) {
     return (
         <View style={PrestadoresStyle.container}>
             <Header txt='Prestadores' require={require('../../img/icon-profile.png')} />
+            <View style={PrestadoresStyle.boxFilter}>
+                <Image style={PrestadoresStyle.imgFilter} source={require('../../img/filter.png')} />
+                <Text style={PrestadoresStyle.txtFilter}>
+                    Filtrar
+                </Text>
+                <Text style={PrestadoresStyle.txtOrder}>
+                    Ordenar por
+                </Text>
+                <Image style={PrestadoresStyle.imgOrder} source={require('../../img/down.png')} />
+            
+            </View>
             <Image style={PrestadoresStyle.imgProfile} source={require('../../img/profile.png')} />
             <View style={PrestadoresStyle.box}>
                 <FlatList
@@ -27,7 +38,9 @@ export function Prestadores({ navigation }) {
                     )}
                     
                 />
-    
+                
+                <Avaliation />
+
                 <View style={PrestadoresStyle.btnBox}>
                     <TouchableOpacity style={PrestadoresStyle.btnAgendar} onPress={() => { navigation.navigate('Agendamento') }}>
                         <Text style={PrestadoresStyle.txtBtnAgendar}>Agendar</Text>

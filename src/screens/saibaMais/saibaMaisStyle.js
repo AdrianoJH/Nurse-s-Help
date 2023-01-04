@@ -57,7 +57,7 @@ export const SaibaMaisStyle = StyleSheet.create({
 
     },
     txtHeader: {
-        marginLeft: 130,
+        marginLeft: 120,
         marginTop: -80,
         fontSize: 23,
         fontWeight: 'bold',
@@ -65,7 +65,7 @@ export const SaibaMaisStyle = StyleSheet.create({
     },
 
     txtHeader2: {
-        marginLeft: 130,
+        marginLeft: 120,
         fontSize: 20,
         color: "#0C008C",
     },
