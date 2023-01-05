@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth"
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBfGdaLpkLdxmLkz9Dq_NoflHHgyqJs02I",
-    authDomain: "nurses-help-dc1e0.firebaseapp.com",
-    projectId: "nurses-help-dc1e0",
-    storageBucket: "nurses-help-dc1e0.appspot.com",
-    messagingSenderId: "98137366146",
-    appId: "1:98137366146:web:bda509d19a71cbe9f71e9b",
-    measurementId: "G-K1N7F91KMG"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
 };
 
 const app = initializeApp(firebaseConfig);
