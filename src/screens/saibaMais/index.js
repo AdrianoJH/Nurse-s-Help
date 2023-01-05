@@ -6,11 +6,14 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
 export function SaibaMais({ navigation }) {
+   
+   
+    
 
     return (
         <View style={SaibaMaisStyle.container}>
              <View style={SaibaMaisStyle.header1}>
-                <TouchableOpacity style={SaibaMaisStyle.btnIcon}>
+                <TouchableOpacity style={SaibaMaisStyle.btnIcon} >
                     <Icon name='chevron-left' style={SaibaMaisStyle.icon} />
                 </TouchableOpacity>
                 <Text style={SaibaMaisStyle.txtHeader1}>Usuário</Text>

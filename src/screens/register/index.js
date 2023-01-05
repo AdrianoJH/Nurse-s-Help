@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
+import { useNavigation} from "@react-navigation/native";
 import { View, Image, Text, TouchableOpacity, TextInput } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
+import { auth } from "../../services/firebase/firebase";
+import {createUserWithEmailAndPassword} from "firebase/auth";
 import { RegisterStyle } from './registerStyle';
 
 
 
 
 export function Register({ navigation }) {
+
     const [image, setImage] = useState(null);
     const [email, setEmail] = useState('');
+    const [password, setPassword] = useState("");
+    const [confPassword, setConfirmPassword] = useState("");
    
 
     const pickImage = async () => {
@@ -23,6 +29,31 @@ export function Register({ navigation }) {
             setImage(result.assets[0].uri);
         }
     };
+
+    function checkPassword(){
+        if(password.length < 6){
+          alert("A senha precisa ter no mínimo 6 digitos!");
+        }else{
+          if(password === confPassword){
+            createUser();
+          }else{
+            alert("As senhas nao coincidem!");
+          }
+        }
+        
+      }
+      
+      
+      async function createUser(){
+        await createUserWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          {
+          alert('Cadastrado efetuado com sucesso!!');
+          navigation.navigate('Login');
+          }
+        
+        }).catch(error => alert(error));
+      };
 
     return (
         <View style={RegisterStyle.container}>
@@ -44,18 +75,28 @@ export function Register({ navigation }) {
                     style={RegisterStyle.txtInput}
                     placeholder='Email'
                     placeholderTextColor='#808080'
+                    value={email}
+                    onChangeText={value => setEmail(value)}
                    
                 />
                 <TextInput
                     style={RegisterStyle.txtInput}
                     placeholder='Senha'
                     placeholderTextColor='#808080'
+                    value={password}
+                    onChangeText={value => setPassword(value)}
+                    maxLength={20}
+                    secureTextEntry={true}
                     
                 />
                 <TextInput
                     style={RegisterStyle.txtInput}
                     placeholder='Repita a senha'
                     placeholderTextColor='#808080'
+                    value={confPassword}
+                    maxLength={20}
+                    secureTextEntry={true}
+                    onChangeText={value => setConfirmPassword(value)}
                 
                 />
                 <View style={RegisterStyle.box3}>
@@ -69,7 +110,7 @@ export function Register({ navigation }) {
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => checkPassword()} style={RegisterStyle.btnCadastrar}>
                 <Text style={RegisterStyle.btnText}>Cadastrar</Text></TouchableOpacity>
-                <TouchableOpacity style={RegisterStyle.btnNext} onPress={() => { navigation.navigate('Register2') }}>
+                <TouchableOpacity style={RegisterStyle.btnNext} onPress={() => { navigation.navigate('Login') }}>
                     <Text style={RegisterStyle.btnText}>Próximo</Text>
                 </TouchableOpacity>
             </View>

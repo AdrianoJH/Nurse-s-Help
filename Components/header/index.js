@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { HeaderStyle } from './headerStyle';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export function Header(props) {
+   
    
     return (
         <View>
